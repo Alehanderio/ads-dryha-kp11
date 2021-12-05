@@ -125,56 +125,50 @@ namespace asd_lab_3
             Console.BackgroundColor = ConsoleColor.Black;
             Console.WriteLine();
         }
-        static void Swop_Swop(int[] array, int a, int b)
+        static void Swap(int[] array, int a, int b)
         {
             int temp = array[a];
             array[a] = array[b];
             array[b] = temp;
         }
-        static void Swap(int i1,int j1,int i2,int j2)
-        {
-            int temp = table[i1, j1];
-            table[i1, j1] = table[i2, j2];
-            table[i2, j2] = temp;
-        }
         static void CoctailThroughArrays()
         {
-            //Buble part
             for (int i = 0; i < min - 1; i++)
             {
                 for (int j = 1; j < min - i; j++)
                 {
+                    //Buble part
                     if (mainD[j] == sideD[j])
                     {
                         if (mainD[j - 1] > mainD[j + 1])
                         {
-                            Swop_Swop(mainD, j - 1, j + 1);
+                            Swap(mainD, j - 1, j + 1);
                         }
                         if (sideD[j - 1] < sideD[j + 1])
                         {
-                            Swop_Swop(sideD, j - 1, j + 1);
+                            Swap(sideD, j - 1, j + 1);
                         }
                     }
                     else if (mainD[j - 1] == sideD[j - 1])
                     {
                         if (mainD[j - 2] > mainD[j])
                         {
-                            Swop_Swop(mainD, j - 2, j);
+                            Swap(mainD, j - 2, j);
                         }
                         if (sideD[j - 2] < sideD[j])
                         {
-                            Swop_Swop(sideD, j - 2, j);
+                            Swap(sideD, j - 2, j);
                         }
                     }
                     else
                     {
                         if (mainD[j - 1] > mainD[j])
                         {
-                            Swop_Swop(mainD, j - 1, j);
+                            Swap(mainD, j - 1, j);
                         }
                         if (sideD[j - 1] < sideD[j])
                         {
-                            Swop_Swop(sideD, j - 1, j);
+                            Swap(sideD, j - 1, j);
                         }
                     }
                 }
@@ -186,32 +180,32 @@ namespace asd_lab_3
                     {
                         if (mainD[j - 1] > mainD[j + 1])
                         {
-                            Swop_Swop(mainD, j - 1, j + 1);
+                            Swap(mainD, j - 1, j + 1);
                         }
                         if (sideD[j - 1] < sideD[j + 1])
                         {
-                            Swop_Swop(sideD, j - 1, j + 1);
+                            Swap(sideD, j - 1, j + 1);
                         }
                     }
                     else if (mainD[j - 1] == sideD[j - 1])
                     {
                         if (mainD[j - 2] > mainD[j])
                         {
-                            Swop_Swop(mainD, j - 2, j);
+                            Swap(mainD, j - 2, j);
                         }
                         if (sideD[j - 2] < sideD[j])
                         {
-                            Swop_Swop(sideD, j - 2, j);
+                            Swap(sideD, j - 2, j);
                         }
                     }
                     else {
                         if (mainD[j] < mainD[j - 1])
                         {
-                            Swop_Swop(mainD, j - 1, j);
+                            Swap(mainD, j - 1, j);
                         }
                         if (sideD[j] > sideD[j - 1])
                         {
-                            Swop_Swop(sideD, j - 1, j);
+                            Swap(sideD, j - 1, j);
                         }
                     }
                 }

@@ -103,14 +103,19 @@ namespace asd_lab_3
             {
                 for (int j = 0; j < m; j++)
                 {
-                    if (i == j)
+                    if (table[i, j] == table[i, m - j - 1])
                     {
-                        Console.BackgroundColor = ConsoleColor.DarkBlue;
+                        Console.BackgroundColor = ConsoleColor.Black;
                         Console.Write($"{matrix[i, j],5}");
                     }
                     else if (i == m - j - 1)
                     {
                         Console.BackgroundColor = ConsoleColor.DarkMagenta;
+                        Console.Write($"{matrix[i, j],5}");
+                    }
+                    else if (i == j)
+                    {
+                        Console.BackgroundColor = ConsoleColor.DarkBlue;
                         Console.Write($"{matrix[i, j],5}");
                     }
                     else

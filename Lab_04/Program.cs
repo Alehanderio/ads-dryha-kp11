@@ -114,7 +114,7 @@ namespace _4_lab_ads
                 else
                 {
                     Node current = head;
-                    if (pos == 0)
+                    if (pos <= 0)
                     {
                         AdFirst(data);
                     }
@@ -156,7 +156,7 @@ namespace _4_lab_ads
                 else
                 {
                     Node current = head;
-                    if (pos == 0)
+                    if (pos <= 0)
                     {
                         DelFirst();
                     }
@@ -193,7 +193,8 @@ namespace _4_lab_ads
             {
                 if (head == null)
                 {
-                    AdFirst(data);
+                    head = new Node(data, null, null);
+                    tail = head;
                 }
                 else if (head.next == null)
                 {
